@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<MPD mediaPresentationDuration="PT15.000S" minBufferTime="PT2.00S" profiles="urn:mpeg:dash:profile:isoff-live:2011" type="static" xmlns="urn:mpeg:dash:schema:mpd:2011">
+  <!-- Created with Bento4 mp4-dash.py, VERSION=1.8.0-627 -->
+  <Period>
+    <!-- Video -->
+    <AdaptationSet maxHeight="1080" maxWidth="1920" mimeType="video/mp4" segmentAlignment="true" startWithSAP="1">
+      <SegmentTemplate duration="2000" initialization="$RepresentationID$/init.mp4" media="$RepresentationID$/seg-$Number%04d$.m4s" startNumber="1" timescale="1000"/>
+      <Representation bandwidth="951732" codecs="avc1.64001E" frameRate="30" height="360" id="video/avc1/1" scanType="progressive" width="640"/>
+      <Representation bandwidth="1890236" codecs="avc1.64001F" frameRate="30" height="540" id="video/avc1/2" scanType="progressive" width="960"/>
+      <Representation bandwidth="2888494" codecs="avc1.64001F" frameRate="30" height="720" id="video/avc1/3" scanType="progressive" width="1280"/>
+      <Representation bandwidth="4303193" codecs="avc1.640029" frameRate="30" height="1080" id="video/avc1/4" scanType="progressive" width="1920"/>
+      <Representation bandwidth="5708065" codecs="avc1.640029" frameRate="30" height="1080" id="video/avc1/5" scanType="progressive" width="1920"/>
+      <Representation bandwidth="7261953" codecs="avc1.640029" frameRate="30" height="1080" id="video/avc1/6" scanType="progressive" width="1920"/>
+    </AdaptationSet>
+    <!-- Audio -->
+    <AdaptationSet lang="en" mimeType="audio/mp4" segmentAlignment="true" startWithSAP="1">
+      <SegmentTemplate duration="2000" initialization="$RepresentationID$/init.mp4" media="$RepresentationID$/seg-$Number%04d$.m4s" startNumber="1" timescale="1000"/>
+      <Representation audioSamplingRate="48000" bandwidth="135142" codecs="mp4a.40.2" id="audio/en/mp4a">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>
